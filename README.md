@@ -24,3 +24,29 @@ ControlCompany/
 ├── agent.py              # Orkiestrator sesji AI i parser narzędzi (Function Calling)
 ├── db_operations.py      # Warstwa dostępu do danych (CRUD Multi-Store)
 └── main.py               # Panel sterowania i interfejs użytkownika (CLI)
+
+
+---
+
+##  Instrukcja Uruchomienia Lokalnego
+
+### 1. Przygotowanie środowiska i zależności
+W terminalu VS Code wykonaj:
+```bash
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install google-genai python-dotenv
+```_
+
+### 2. Konfiguracja i start
+* Stwórz plik `.env` i wklej: `GEMINI_API_KEY=twój_klucz`
+* Uruchom aplikację: `python main.py`
+
+---
+
+##  Rozwiązywanie Problemów (Troubleshooting)
+
+### Błąd aktywacji skryptów w systemie Windows (PowerShell)
+Jeśli PowerShell zablokuje uruchomienie `Activate.ps1`, wpisz w terminalu:
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
